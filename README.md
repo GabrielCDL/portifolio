@@ -11,7 +11,7 @@
 
 Profissional em atuação na área de **Tecnologia da Informação**, com experiência em **infraestrutura**, **suporte técnico**, **redes de computadores** e **desenvolvimento de sistemas**. Busco experiências que me permitam aprimorar minhas habilidades técnicas, contribuir para soluções eficientes e fortalecer minha atuação tanto em projetos de infraestrutura e redes quanto em desenvolvimento de software.
 
-- 💻 Atualmente atuando no desenvolvimento e integração de automações com IA na **Cachina Tecnologia**.
+- 💻 Atualmente atuando no desenvolvimento e integração de automações com IA.
 - 🎓 Bacharel em **Engenharia da Computação** pela UFRN.
 - 📍 Natal, RN - Brasil.
 - 🎯 Busco constantemente evoluir minhas habilidades técnicas e contribuir para projetos de software e infraestrutura de TI.
