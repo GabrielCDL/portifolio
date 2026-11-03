@@ -135,8 +135,9 @@ body {
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: 0.95rem; /* Reduz ligeiramente o tamanho da fonte */
   margin-bottom: 40px;
+  white-space: nowrap; /* Impede a quebra de linha */
 }
 
 .hero-buttons {
@@ -254,11 +255,21 @@ body {
 }
 
 /* Alinhamento e espaçamento das badges de tecnologias dentro dos cards */
-.skills-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: auto;
+/* Correção e alinhamento dos ícones dentro das badges/tags */
+.skills-badges .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* Espaço perfeito entre o ícone e o nome da tecnologia */
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+/* Garante que o ícone mantenha proporção correta e visibilidade */
+.skills-badges .badge i {
+  font-size: 1rem;
+  display: inline-block;
 }
 
 /* Cores customizadas dos badges de tech */
@@ -609,7 +620,7 @@ body {
 
 /* Cor oficial do ícone do WhatsApp nas tags */
 .icon-whatsapp {
-  color: #25D366 !important;
+  color: #25d366 !important;
 }
 
 /* Alinhamento do botão de repositório na parte inferior */
@@ -623,43 +634,110 @@ body {
    CORES DOS ÍCONES E TECNOLOGIAS
    =================================================== */
 
-.icon-py { color: #3776ab; }
-.icon-java { color: #007396; }
-.icon-js { color: #f7df1e; }
-.icon-c { color: #a8b9cc; }
-.icon-cpp { color: #00599c; }
-.icon-html { color: #e34f26; }
-.icon-css { color: #1572b6; }
-.icon-react { color: #61dafb; }
-.icon-node { color: #339933; }
-.icon-express { color: #000000; }
+.icon-py {
+  color: #3776ab;
+}
+.icon-java {
+  color: #007396;
+}
+.icon-js {
+  color: #f7df1e;
+}
+.icon-c {
+  color: #a8b9cc;
+}
+.icon-cpp {
+  color: #00599c;
+}
+.icon-html {
+  color: #e34f26;
+}
+.icon-css {
+  color: #1572b6;
+}
+.icon-react {
+  color: #61dafb;
+}
+.icon-node {
+  color: #339933;
+}
+.icon-express {
+  color: #000000;
+}
 
-.icon-mysql { color: #4479a1; }
-.icon-postgres { color: #4169e1; }
-.icon-mongo { color: #47a248; }
-.icon-redis { color: #dc382d; }
-.icon-powerbi { color: #f2c811; }
-.icon-n8n { color: #ff6584; }
-.icon-docker { color: #2496ed; }
-.icon-git { color: #f05032; }
+.icon-mysql {
+  color: #4479a1;
+}
+.icon-postgres {
+  color: #4169e1;
+}
+.icon-mongo {
+  color: #47a248;
+}
+.icon-redis {
+  color: #dc382d;
+}
+.icon-powerbi {
+  color: #f2c811;
+}
+.icon-n8n {
+  color: #ff6584;
+}
+.icon-docker {
+  color: #2496ed;
+}
+.icon-git {
+  color: #f05032;
+}
 
-.icon-linux { color: #fcc624; }
-.icon-windows { color: #0078d6; }
-.icon-apple { color: #a2aaad; }
-.icon-cisco { color: #1ba0d7; }
-.icon-mikrotik { color: #29323c; }
-.icon-zabbix { color: #d40000; }
-.icon-grafana { color: #f46800; }
+.icon-linux {
+  color: #fcc624;
+}
+.icon-windows {
+  color: #0078d6;
+}
+.icon-apple {
+  color: #a2aaad;
+}
+.icon-cisco {
+  color: #1ba0d7;
+}
+.icon-mikrotik {
+  color: #29323c;
+}
+.icon-zabbix {
+  color: #d40000;
+}
+.icon-grafana {
+  color: #f46800;
+}
 
-.icon-whatsapp { color: #25d366; }
-.icon-github { color: #181717; }
-.icon-linkedin { color: #0a66c2; }
-.icon-email { color: #ea4335; }
-.icon-ufrn { color: #005691; }
-.icon-ifrn { color: #008d46; }
+.icon-whatsapp {
+  color: #25d366;
+}
+.icon-github {
+  color: #181717;
+}
+.icon-linkedin {
+  color: #0a66c2;
+}
+.icon-email {
+  color: #ea4335;
+}
+.icon-ufrn {
+  color: #005691;
+}
+.icon-ifrn {
+  color: #008d46;
+}
 
 /* Ícones dos cabeçalhos das categorias */
-.icon-dev { color: #61dafb; }
-.icon-db { color: #47a248; }
-.icon-infra { color: #2496ed; }
-
+.icon-dev {
+  color: #61dafb;
+}
+.icon-db {
+  color: #47a248;
+}
+.icon-infra {
+  color: #2496ed;
+}
