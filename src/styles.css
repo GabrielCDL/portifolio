@@ -1,4 +1,4 @@
-﻿/* Vari├íveis de Cores e Estilo */
+﻿/* Variaveis de Cores e Estilo */
 :root {
   --bg-color: #ffffff;
   --bg-light: #f8f9fa;
@@ -127,10 +127,11 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.3rem;
-  color: var(--text-muted);
-  margin-bottom: 30px;
-  font-weight: 400;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text-muted, #555);
+  margin-bottom: 1.5rem;
+  white-space: nowrap; /* Impede a quebra de linha automática */
 }
 
 .hero-description {
@@ -190,57 +191,74 @@ body {
 }
 
 /* Sobre Mim */
+/* Alinhamento e legibilidade da seção Sobre Mim */
+.about-text {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.about-text p {
+  text-align: justify; /* Justifica o parágrafo principal */
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted, #444);
+}
+
 .about-list {
   list-style: none;
-  margin-top: 20px;
+  padding: 0;
 }
 
 .about-list li {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 12px;
-  margin-bottom: 15px;
-}
-
-.about-list i {
-  color: var(--primary-color);
-  margin-top: 5px;
+  margin-bottom: 0.8rem;
+  text-align: left; /* Mantém os itens da lista alinhados à esquerda para melhor leitura dos ícones */
 }
 
 /* Tecnologias e Badges */
+/* Ajuste da grade de tecnologias para acomodar os cards maiores */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
 }
 
+/* Estilo individual de cada card de tecnologia */
 .skills-card {
-  background-color: var(--card-bg);
-  padding: 25px;
-  border-radius: 8px;
-  border: 1px solid var(--border-color);
+  background: var(--bg-card, #ffffff);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
 }
 
-.skills-card h3 {
-  margin-bottom: 20px;
-  font-size: 1.2rem;
+/* Mantem o ícone e o título na mesma linha sem quebras feias */
+.card-title-inline {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  white-space: nowrap; /* Garante que o texto fique na mesma linha do icone */
 }
 
+/* Tamanho do ícone principal do card */
+.card-title-inline i {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Alinhamento e espaçamento das badges de tecnologias dentro dos cards */
 .skills-badges {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-}
-
-.badge {
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  background-color: var(--border-color);
+  gap: 0.6rem;
+  margin-top: auto;
 }
 
 /* Cores customizadas dos badges de tech */
@@ -321,7 +339,7 @@ body {
   color: white;
 }
 
-/* Timeline de Experi├¬ncia */
+/* Timeline de Experiencia */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -370,7 +388,7 @@ body {
   color: var(--text-muted);
 }
 
-/* Forma├º├úo Acad├¬mica */
+/* Formacao Academica */
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -533,10 +551,72 @@ body {
   margin-bottom: 0.8rem;
 }
 
-/* Ajustes dos ícones nas badges e tags */
-.badge i,
-.project-tags i {
-  margin-right: 4px;
+/* ===================================================
+   SEÇÃO DE PROJETOS EM DESTAQUE (Ajustes de Grid e Espaçamento)
+   =================================================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: stretch;
+}
+
+.project-card {
+  background: var(--bg-card, #ffffff);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color, rgba(0, 0, 0, 0.08));
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-color, #222);
+  font-weight: 600;
+}
+
+.project-info p {
+  font-size: 0.95rem;
+  color: var(--text-muted, #555);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+/* Espaçamento e alinhamento das tags/badges */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Cor oficial do ícone do WhatsApp nas tags */
+.icon-whatsapp {
+  color: #25D366 !important;
+}
+
+/* Alinhamento do botão de repositório na parte inferior */
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
 }
 
 /* ===================================================
