@@ -403,6 +403,26 @@ body {
   background-color: #f46800;
   color: white;
 }
+.badge-pandas {
+  background-color: #0d023b;
+  color: white;
+}
+.badge-excel {
+  background-color: #217346;
+  color: white;
+}
+.badge-cpp {
+  background-color: #00599c;
+  color: white;
+}
+.badge-graphics {
+  background-color: #ff6f61;
+  color: white;
+}
+.badge-structures {
+  background-color: #6c757d;
+  color: white;
+}
 
 /* Timeline de Experiencia */
 .timeline {
